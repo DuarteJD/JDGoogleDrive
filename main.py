@@ -6,7 +6,7 @@ from pathlib import Path
 import configparser, sys
 
 def carregar_informacoes():
-    caminho_ini = Path(__file__).with_name("JDGoogleDrive.ini")
+    caminho_ini = Path(sys.executable).with_name("JDGoogleDrive.ini")
     if not caminho_ini.exists():
         raise ValueError(f"Arquivo de configuração não encontrado: {caminho_ini}")        
 
